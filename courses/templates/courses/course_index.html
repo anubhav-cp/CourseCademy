@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<div class="d-flex" id="wrapper" >
+  <!-- Sidebar-->
+  <div class="border-end border-bottom bg-light" style="width: 380px;" id="sidebar-wrapper">
+
+    <a class="d-flex bg-success align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+      <span class="fs-5 fw-semibold">{{course.title}}</span>
+    </a>
+
+      <div class="list-group list-group-flush">
+        {% for chapter in content %}
+          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">{{chapter.title}}</a>
+          {% endfor %}
+      </div>
+  </div>
+
+  
+      <!-- Page content-->
+      <div class="container-fluid">
+
+      <div class="pt-2 ps-3">
+        <video
+        id="my-video"
+        class="video-js"
+        
+        controls
+        preload="auto"
+        width="1000"
+        height="600"
+        poster=""
+        data-setup="{}"
+      >
+        <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
+        <source src="MY_VIDEO.webm" type="video/webm" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank"
+            >supports HTML5 video</a
+          >
+        </p>
+      </video>
+    </div>
+</div>
+</div>
+    
+{% endblock %}
+

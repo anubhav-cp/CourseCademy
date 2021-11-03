@@ -11,9 +11,9 @@
   <div class="card shadow">
     <img class="card-img-top" src="{{course.featured_image.url}}" alt="Card image cap">
     <div class="card-body">
-    <span class="badge badge-danger">Free</span>
+    <span class="badge badge-danger">{{course.type}}</span>
     <h5>{{course.title}}</h5>
-    <button type="button" class="btn btn-success">View Course</button>
+    <a class="btn btn-success" href="{% url 'view-course' course.id %}">View Course</a>
     </div>
 </div>
 </div> 
